@@ -1,0 +1,563 @@
+{
+ "catalog__aksessuari": {
+  "slugs": [
+   "ridikul-oduvanchik",
+   "vishivka-gvozdika",
+   "eskiz-vyshivki-roza",
+   "vishivka-tatarnik",
+   "tri-rozi"
+  ],
+  "descs": {
+   "ridikul-oduvanchik": "Ридикюль для телефона. Размер 18 х 12 см. Выполнен из эко-кожи на подкладе.",
+   "vishivka-gvozdika": "Эскиз вышивки \"Гвоздика\". Размер эскиза 20*40 см. Может быть воспроизведен на бытовой швейной машине и вручную",
+   "eskiz-vyshivki-roza": "Эскиз вышивки \"Роза\". Размер эскиза 28*32 см. Может быть воспроизведен на бытовой швейной машине и вручную.",
+   "vishivka-tatarnik": "Эскиз вышивки \"Татарник\". Размер эскиза 20*65 см. Выполнен вручную. Может быть воспроизведен на бытовой швейной машине",
+   "tri-rozi": "Эскиз вышивки \"Три розы\" доступен к заказу в трех цветах: розовый, черный, серый. Размер эскизов 8*8 см, 10*11 см и 12*10 см. Может быть воспроизведен на бытовой швейной машине и вручную"
+  },
+  "title": "Аксессуары"
+ },
+ "catalog__aksessuari__aksessuari": {
+  "slugs": [
+   "ridikul-oduvanchik"
+  ],
+  "descs": {
+   "ridikul-oduvanchik": "Ридикюль для телефона. Размер 18 х 12 см. Выполнен из эко-кожи на подкладе."
+  },
+  "title": "Аксессуары"
+ },
+ "catalog__aksessuari__applikicii.html": [],
+ "catalog__aksessuari__vishivki": {
+  "slugs": [
+   "vishivka-gvozdika",
+   "eskiz-vyshivki-roza",
+   "vishivka-tatarnik",
+   "tri-rozi"
+  ],
+  "descs": {
+   "vishivka-gvozdika": "Эскиз вышивки \"Гвоздика\". Размер эскиза 20*40 см. Может быть воспроизведен на бытовой швейной машине и вручную",
+   "eskiz-vyshivki-roza": "Эскиз вышивки \"Роза\". Размер эскиза 28*32 см. Может быть воспроизведен на бытовой швейной машине и вручную.",
+   "vishivka-tatarnik": "Эскиз вышивки \"Татарник\". Размер эскиза 20*65 см. Выполнен вручную. Может быть воспроизведен на бытовой швейной машине",
+   "tri-rozi": "Эскиз вышивки \"Три розы\" доступен к заказу в трех цветах: розовый, черный, серый. Размер эскизов 8*8 см, 10*11 см и 12*10 см. Может быть воспроизведен на бытовой швейной машине и вручную"
+  },
+  "title": "Вышивки"
+ },
+ "catalog__besplatnie-vikroyki": {
+  "slugs": [
+   "shopper",
+   "ubka.artishok"
+  ],
+  "descs": {
+   "shopper": "Юбка из джерси длиной выше колена."
+  },
+  "title": "Бесплатные выкройки"
+ },
+ "catalog__besplatnie-vikroyki__sumki": {
+  "slugs": [
+   "shopper"
+  ],
+  "descs": {},
+  "title": "Сумки"
+ },
+ "catalog__besplatnie-vikroyki__ubki": {
+  "slugs": [
+   "ubka.artishok"
+  ],
+  "descs": {
+   "ubka.artishok": "Юбка из джерси длиной выше колена."
+  },
+  "title": "Юбки"
+ },
+ "catalog__bruki-shorti-ubki": {
+  "slugs": [
+   "brjuki-gejhera",
+   "bruki-muskari",
+   "djoggery-edelveys",
+   "shorty-kalla",
+   "yubka-primula",
+   "mini-ubka-tatrnik",
+   "ubka-akvilegiya"
+  ],
+  "descs": {
+   "brjuki-gejhera": "Вельветовые брюки палаццо на кокетке, пояс на резинке. Посадка брюк высокая, верхний край пояса на талии.",
+   "bruki-muskari": "Брюки палаццо с цельнокроеным поясом на резинке. Посадка брюк высокая, верхний край пояса на талии.",
+   "djoggery-edelveys": "Джоггеры из металлизированной эко-кожи. Пояс цельнокроеный на резинке для удобной посадки",
+   "shorty-kalla": "Короткие шорты из эко-кожи прямого кроя на подкладе. Пояс отрезной на резинке.",
+   "yubka-primula": "Юбка-солнце из клиньев длиной чуть выше щиколотки из шитья",
+   "mini-ubka-tatrnik": "Трикотажная мини-юбка на эластичном подкладе. Пояс на резинке.",
+   "ubka-akvilegiya": "Прямая мини-юбка из жаккарда на подкладе. По талии небольшие сборки. Спереди застежка на пробивные кнопки."
+  },
+  "title": "Брюки, шорты и юбки"
+ },
+ "catalog__bruki-shorti-ubki__bruki": {
+  "slugs": [
+   "brjuki-gejhera",
+   "bruki-muskari",
+   "djoggery-edelveys"
+  ],
+  "descs": {
+   "brjuki-gejhera": "Вельветовые брюки палаццо на кокетке, пояс на резинке. Посадка брюк высокая, верхний край пояса на талии.",
+   "bruki-muskari": "Брюки палаццо с цельнокроеным поясом на резинке. Посадка брюк высокая, верхний край пояса на талии.",
+   "djoggery-edelveys": "Джоггеры из металлизированной эко-кожи. Пояс цельнокроеный на резинке для удобной посадки"
+  },
+  "title": "Брюки"
+ },
+ "catalog__bruki-shorti-ubki__bruki__expert.html": [],
+ "catalog__bruki-shorti-ubki__bruki__novichok": {
+  "slugs": [
+   "brjuki-gejhera",
+   "bruki-muskari",
+   "djoggery-edelveys"
+  ],
+  "descs": {
+   "brjuki-gejhera": "Вельветовые брюки палаццо на кокетке, пояс на резинке. Посадка брюк высокая, верхний край пояса на талии.",
+   "bruki-muskari": "Брюки палаццо с цельнокроеным поясом на резинке. Посадка брюк высокая, верхний край пояса на талии.",
+   "djoggery-edelveys": "Джоггеры из металлизированной эко-кожи. Пояс цельнокроеный на резинке для удобной посадки"
+  },
+  "title": "НОВИЧОК"
+ },
+ "catalog__bruki-shorti-ubki__bruki__specialist.html": [],
+ "catalog__bruki-shorti-ubki__shorti": {
+  "slugs": [
+   "shorty-kalla"
+  ],
+  "descs": {
+   "shorty-kalla": "Короткие шорты из эко-кожи прямого кроя на подкладе. Пояс отрезной на резинке."
+  },
+  "title": "Шорты"
+ },
+ "catalog__bruki-shorti-ubki__shorti__expert.html": [],
+ "catalog__bruki-shorti-ubki__shorti__novichok.html": [],
+ "catalog__bruki-shorti-ubki__shorti__specialist": {
+  "slugs": [
+   "shorty-kalla"
+  ],
+  "descs": {
+   "shorty-kalla": "Короткие шорты из эко-кожи прямого кроя на подкладе. Пояс отрезной на резинке."
+  },
+  "title": "СПЕЦИАЛИСТ"
+ },
+ "catalog__bruki-shorti-ubki__ubki": {
+  "slugs": [
+   "yubka-primula",
+   "mini-ubka-tatrnik",
+   "ubka-akvilegiya"
+  ],
+  "descs": {
+   "yubka-primula": "Юбка-солнце из клиньев длиной чуть выше щиколотки из шитья",
+   "mini-ubka-tatrnik": "Трикотажная мини-юбка на эластичном подкладе. Пояс на резинке.",
+   "ubka-akvilegiya": "Прямая мини-юбка из жаккарда на подкладе. По талии небольшие сборки. Спереди застежка на пробивные кнопки."
+  },
+  "title": "Юбки"
+ },
+ "catalog__bruki-shorti-ubki__ubki__expert.html": [],
+ "catalog__bruki-shorti-ubki__ubki__novichok": {
+  "slugs": [
+   "yubka-primula",
+   "mini-ubka-tatrnik",
+   "ubka-akvilegiya"
+  ],
+  "descs": {
+   "yubka-primula": "Юбка-солнце из клиньев длиной чуть выше щиколотки из шитья",
+   "mini-ubka-tatrnik": "Трикотажная мини-юбка на эластичном подкладе. Пояс на резинке.",
+   "ubka-akvilegiya": "Прямая мини-юбка из жаккарда на подкладе. По талии небольшие сборки. Спереди застежка на пробивные кнопки."
+  },
+  "title": "НОВИЧОК"
+ },
+ "catalog__bruki-shorti-ubki__ubki__specialist.html": [],
+ "catalog__jileti-jaketi": {
+  "slugs": [
+   "dojdevik-drakunkulus",
+   "jaket-gorchica",
+   "jilet-roza",
+   "zhilet-top-gorechavka",
+   "kardigan-kurkuma",
+   "trench-gorchica-modul-dlini",
+   "modul-dlini-gorchica"
+  ],
+  "descs": {
+   "dojdevik-drakunkulus": "Дождевик прямого кроя с капюшоном. Выполнен из плащевки с принтом «питон» на подкладке",
+   "jaket-gorchica": "Льняной жакет с отстегивающимися рукавами и поясом. Подклад из шелка контрастного цвета.",
+   "jilet-roza": "Льняной двусторонний утепленный жилет с запахом и стежковой вышивкой на спине. Воротник стойка.",
+   "zhilet-top-gorechavka": "Жилет-топ двубортный прямого кроя с воланом.",
+   "kardigan-kurkuma": "Кардиган с запахом прямого кроя на подкладе. Застегивается на 2 пришивные кнопки.",
+   "trench-gorchica-modul-dlini": "Льняной модуль длины на шелковом подкладе контрастного цвета применятся для трансформации жакета в тренч.",
+   "modul-dlini-gorchica": "Льняной тренч-трансформер с отстегивающимися рукавами и двумя модулями длины."
+  },
+  "title": "Жилеты и жакеты"
+ },
+ "catalog__jileti-jaketi__jaketi": {
+  "slugs": [
+   "dojdevik-drakunkulus",
+   "jaket-gorchica",
+   "kardigan-kurkuma",
+   "trench-gorchica-modul-dlini",
+   "modul-dlini-gorchica"
+  ],
+  "descs": {
+   "dojdevik-drakunkulus": "Дождевик прямого кроя с капюшоном. Выполнен из плащевки с принтом «питон» на подкладке",
+   "jaket-gorchica": "Льняной жакет с отстегивающимися рукавами и поясом. Подклад из шелка контрастного цвета.",
+   "kardigan-kurkuma": "Кардиган с запахом прямого кроя на подкладе. Застегивается на 2 пришивные кнопки.",
+   "trench-gorchica-modul-dlini": "Льняной модуль длины на шелковом подкладе контрастного цвета применятся для трансформации жакета в тренч.",
+   "modul-dlini-gorchica": "Льняной тренч-трансформер с отстегивающимися рукавами и двумя модулями длины."
+  },
+  "title": "Жакеты"
+ },
+ "catalog__jileti-jaketi__jaketi__expert": {
+  "slugs": [
+   "jaket-gorchica",
+   "trench-gorchica-modul-dlini",
+   "modul-dlini-gorchica"
+  ],
+  "descs": {
+   "jaket-gorchica": "Льняной жакет с отстегивающимися рукавами и поясом. Подклад из шелка контрастного цвета.",
+   "trench-gorchica-modul-dlini": "Льняной модуль длины на шелковом подкладе контрастного цвета применятся для трансформации жакета в тренч.",
+   "modul-dlini-gorchica": "Льняной тренч-трансформер с отстегивающимися рукавами и двумя модулями длины."
+  },
+  "title": "ЭКСПЕРТ"
+ },
+ "catalog__jileti-jaketi__jaketi__novichok.html": [],
+ "catalog__jileti-jaketi__jaketi__specialist": {
+  "slugs": [
+   "dojdevik-drakunkulus",
+   "kardigan-kurkuma"
+  ],
+  "descs": {
+   "dojdevik-drakunkulus": "Дождевик прямого кроя с капюшоном. Выполнен из плащевки с принтом «питон» на подкладке",
+   "kardigan-kurkuma": "Кардиган с запахом прямого кроя на подкладе. Застегивается на 2 пришивные кнопки."
+  },
+  "title": "СПЕЦИАЛИСТ"
+ },
+ "catalog__jileti-jaketi__jileti": {
+  "slugs": [
+   "jilet-roza",
+   "zhilet-top-gorechavka"
+  ],
+  "descs": {
+   "jilet-roza": "Льняной двусторонний утепленный жилет с запахом и стежковой вышивкой на спине. Воротник стойка.",
+   "zhilet-top-gorechavka": "Жилет-топ двубортный прямого кроя с воланом."
+  },
+  "title": "Жилеты"
+ },
+ "catalog__jileti-jaketi__jileti__expert.html": [],
+ "catalog__jileti-jaketi__jileti__novihok": {
+  "slugs": [
+   "jilet-roza",
+   "zhilet-top-gorechavka"
+  ],
+  "descs": {
+   "jilet-roza": "Льняной двусторонний утепленный жилет с запахом и стежковой вышивкой на спине. Воротник стойка.",
+   "zhilet-top-gorechavka": "Жилет-топ двубортный прямого кроя с воланом."
+  },
+  "title": "НОВИЧОК"
+ },
+ "catalog__jileti-jaketi__jileti__specialist.html": [],
+ "catalog__kombinezoni.html": [],
+ "catalog__offers__hit.html": [],
+ "catalog__offers__new.html": [],
+ "catalog__offers__spec.html": [],
+ "catalog__platya-sarafani": {
+  "slugs": [
+   "takka",
+   "depfinium",
+   "galantus",
+   "gibiskus",
+   "sarafan-fuksiya"
+  ],
+  "descs": {
+   "takka": "Прямое платье-мини",
+   "depfinium": "Прямое платье из джерси с цельнокроеным воротником на молнии",
+   "galantus": "Платье-мини прямого кроя без рукавов на подкладе",
+   "gibiskus": "Лаконичный сарафан прямого кроя на бретелях",
+   "sarafan-fuksiya": "Льняной сарафан на бретелях и с завязками пояса в боковых швах. Длина - мини"
+  },
+  "title": "Платья и сарафаны"
+ },
+ "catalog__platya-sarafani__platya": {
+  "slugs": [
+   "takka",
+   "depfinium",
+   "galantus"
+  ],
+  "descs": {
+   "takka": "Прямое платье-мини",
+   "depfinium": "Прямое платье из джерси с цельнокроеным воротником на молнии",
+   "galantus": "Платье-мини прямого кроя без рукавов на подкладе"
+  },
+  "title": "Платья"
+ },
+ "catalog__platya-sarafani__platya__expert": {
+  "slugs": [
+   "galantus"
+  ],
+  "descs": {
+   "galantus": "Платье-мини прямого кроя без рукавов на подкладе"
+  },
+  "title": "ЭКСПЕРТ"
+ },
+ "catalog__platya-sarafani__platya__novichok": {
+  "slugs": [
+   "takka",
+   "depfinium"
+  ],
+  "descs": {
+   "takka": "Прямое платье-мини",
+   "depfinium": "Прямое платье из джерси с цельнокроеным воротником на молнии"
+  },
+  "title": "НОВИЧОК"
+ },
+ "catalog__platya-sarafani__platya__specialist.html": [],
+ "catalog__platya-sarafani__sarafani": {
+  "slugs": [
+   "gibiskus",
+   "sarafan-fuksiya"
+  ],
+  "descs": {
+   "gibiskus": "Лаконичный сарафан прямого кроя на бретелях",
+   "sarafan-fuksiya": "Льняной сарафан на бретелях и с завязками пояса в боковых швах. Длина - мини"
+  },
+  "title": "Сарафаны"
+ },
+ "catalog__platya-sarafani__sarafani__expert.html": [],
+ "catalog__platya-sarafani__sarafani__novichok": {
+  "slugs": [
+   "sarafan-fuksiya"
+  ],
+  "descs": {
+   "sarafan-fuksiya": "Льняной сарафан на бретелях и с завязками пояса в боковых швах. Длина - мини"
+  },
+  "title": "НОВИЧОК"
+ },
+ "catalog__platya-sarafani__sarafani__specialist": {
+  "slugs": [
+   "gibiskus"
+  ],
+  "descs": {
+   "gibiskus": "Лаконичный сарафан прямого кроя на бретелях"
+  },
+  "title": "СПЕЦИАЛИСТ"
+ },
+ "catalog__rubashki-bluzi-jampera": {
+  "slugs": [
+   "bluza-lilija",
+   "bluza-primula",
+   "bluza-kalla",
+   "bluza-ciklamen",
+   "djemper-gvozdika",
+   "djemper-magnoliya",
+   "djemper-rubekiya",
+   "djemper-tatarnik",
+   "rubashka-naperstyanka",
+   "rubashka-nasturciya"
+  ],
+  "descs": {
+   "bluza-lilija": "Блуза свободного кроя с диагональной застежкой. Выполнена из хлопка.",
+   "bluza-primula": "Блуза прямого кроя с короткими рукавами из шитья",
+   "bluza-kalla": "Блуза из эко-кожи прямого кроя на подкладе. Имеет цельнокроеный бочок и рукава-крылышки",
+   "bluza-ciklamen": "Льняная блуза оверсайз без воротника с асимметричной застёжкой на пуговицы и рукавом 7/8. По бокам небольшие разрезы",
+   "djemper-gvozdika": "Джемпер прямого кроя. Выполнен из однотонного футера ( 3-х нитка диагональ ) двух цветов: молочный и капучино",
+   "djemper-magnoliya": "Джемпер прямого кроя выполнен из однотонного футера 2-х нитка",
+   "djemper-rubekiya": "Джемпер оверсайз из тонкого трикотажа. Горловина оформлена воротником-хомут конической формы. Рукава реглан с прямым нижним краем",
+   "djemper-tatarnik": "Джемпер прямого кроя из трикотажа. Рукава-реглан имеют прямой срез по нижнему краю",
+   "rubashka-naperstyanka": "Рубашка из хлопка с длинным рукавом и съемной планкой спереди. Вырез квадратный. Застежка спереди и на манжетах - пробивные кнопки",
+   "rubashka-nasturciya": "Рубашка с длинным рукавом прямого кроя выполнена из сорочечного хлопка. Длина до бедер."
+  },
+  "title": "Рубашки, блузы и джемперы"
+ },
+ "catalog__rubashki-bluzi-jampera__bluzi": {
+  "slugs": [
+   "bluza-lilija",
+   "bluza-primula",
+   "bluza-kalla",
+   "bluza-ciklamen"
+  ],
+  "descs": {
+   "bluza-lilija": "Блуза свободного кроя с диагональной застежкой. Выполнена из хлопка.",
+   "bluza-primula": "Блуза прямого кроя с короткими рукавами из шитья",
+   "bluza-kalla": "Блуза из эко-кожи прямого кроя на подкладе. Имеет цельнокроеный бочок и рукава-крылышки",
+   "bluza-ciklamen": "Льняная блуза оверсайз без воротника с асимметричной застёжкой на пуговицы и рукавом 7/8. По бокам небольшие разрезы"
+  },
+  "title": "Блузы"
+ },
+ "catalog__rubashki-bluzi-jampera__bluzi__expert.html": [],
+ "catalog__rubashki-bluzi-jampera__bluzi__novichok": {
+  "slugs": [
+   "bluza-primula"
+  ],
+  "descs": {
+   "bluza-primula": "Блуза прямого кроя с короткими рукавами из шитья"
+  },
+  "title": "НОВИЧОК"
+ },
+ "catalog__rubashki-bluzi-jampera__bluzi__specialist": {
+  "slugs": [
+   "bluza-lilija",
+   "bluza-kalla",
+   "bluza-ciklamen"
+  ],
+  "descs": {
+   "bluza-lilija": "Блуза свободного кроя с диагональной застежкой. Выполнена из хлопка.",
+   "bluza-kalla": "Блуза из эко-кожи прямого кроя на подкладе. Имеет цельнокроеный бочок и рукава-крылышки",
+   "bluza-ciklamen": "Льняная блуза оверсайз без воротника с асимметричной застёжкой на пуговицы и рукавом 7/8. По бокам небольшие разрезы"
+  },
+  "title": "СПЕЦИАЛИСТ"
+ },
+ "catalog__rubashki-bluzi-jampera__djemperi": {
+  "slugs": [
+   "djemper-gvozdika",
+   "djemper-magnoliya",
+   "djemper-rubekiya",
+   "djemper-tatarnik"
+  ],
+  "descs": {
+   "djemper-gvozdika": "Джемпер прямого кроя. Выполнен из однотонного футера ( 3-х нитка диагональ ) двух цветов: молочный и капучино",
+   "djemper-magnoliya": "Джемпер прямого кроя выполнен из однотонного футера 2-х нитка",
+   "djemper-rubekiya": "Джемпер оверсайз из тонкого трикотажа. Горловина оформлена воротником-хомут конической формы. Рукава реглан с прямым нижним краем",
+   "djemper-tatarnik": "Джемпер прямого кроя из трикотажа. Рукава-реглан имеют прямой срез по нижнему краю"
+  },
+  "title": "Джемперы"
+ },
+ "catalog__rubashki-bluzi-jampera__djemperi__expert.html": [],
+ "catalog__rubashki-bluzi-jampera__djemperi__novichok": {
+  "slugs": [
+   "djemper-gvozdika",
+   "djemper-magnoliya",
+   "djemper-rubekiya",
+   "djemper-tatarnik"
+  ],
+  "descs": {
+   "djemper-gvozdika": "Джемпер прямого кроя. Выполнен из однотонного футера ( 3-х нитка диагональ ) двух цветов: молочный и капучино",
+   "djemper-magnoliya": "Джемпер прямого кроя выполнен из однотонного футера 2-х нитка",
+   "djemper-rubekiya": "Джемпер оверсайз из тонкого трикотажа. Горловина оформлена воротником-хомут конической формы. Рукава реглан с прямым нижним краем",
+   "djemper-tatarnik": "Джемпер прямого кроя из трикотажа. Рукава-реглан имеют прямой срез по нижнему краю"
+  },
+  "title": "НОВИЧОК"
+ },
+ "catalog__rubashki-bluzi-jampera__djemperi__specialist.html": [],
+ "catalog__rubashki-bluzi-jampera__rubashki": {
+  "slugs": [
+   "rubashka-naperstyanka",
+   "rubashka-nasturciya"
+  ],
+  "descs": {
+   "rubashka-naperstyanka": "Рубашка из хлопка с длинным рукавом и съемной планкой спереди. Вырез квадратный. Застежка спереди и на манжетах - пробивные кнопки",
+   "rubashka-nasturciya": "Рубашка с длинным рукавом прямого кроя выполнена из сорочечного хлопка. Длина до бедер."
+  },
+  "title": "Рубашки"
+ },
+ "catalog__rubashki-bluzi-jampera__rubashki__expert.html": [],
+ "catalog__rubashki-bluzi-jampera__rubashki__novichok.html": [],
+ "catalog__rubashki-bluzi-jampera__rubashki__specialist": {
+  "slugs": [
+   "rubashka-naperstyanka",
+   "rubashka-nasturciya"
+  ],
+  "descs": {
+   "rubashka-naperstyanka": "Рубашка из хлопка с длинным рукавом и съемной планкой спереди. Вырез квадратный. Застежка спереди и на манжетах - пробивные кнопки",
+   "rubashka-nasturciya": "Рубашка с длинным рукавом прямого кроя выполнена из сорочечного хлопка. Длина до бедер."
+  },
+  "title": "СПЕЦИАЛИСТ"
+ },
+ "catalog__sale.gotovaya-odejda.html": [],
+ "catalog__topi-bra": {
+  "slugs": [
+   "bra-brahioma",
+   "zhilet-top-gorechavka"
+  ],
+  "descs": {
+   "bra-brahioma": "Льняной бра с бретелями из репсовой ленты. Спереди по центру и в боковых швах - складки. Сзади застежка на пришивные кнопки",
+   "zhilet-top-gorechavka": "Жилет-топ двубортный прямого кроя с воланом."
+  },
+  "title": "Топы и бра"
+ },
+ "catalog__topi-bra__bra": {
+  "slugs": [
+   "bra-brahioma"
+  ],
+  "descs": {
+   "bra-brahioma": "Льняной бра с бретелями из репсовой ленты. Спереди по центру и в боковых швах - складки. Сзади застежка на пришивные кнопки"
+  },
+  "title": "Бра"
+ },
+ "catalog__topi-bra__bra__expert.html": [],
+ "catalog__topi-bra__bra__novichok.html": [],
+ "catalog__topi-bra__bra__specialist": {
+  "slugs": [
+   "bra-brahioma"
+  ],
+  "descs": {
+   "bra-brahioma": "Льняной бра с бретелями из репсовой ленты. Спереди по центру и в боковых швах - складки. Сзади застежка на пришивные кнопки"
+  },
+  "title": "СПЕЦИАЛИСТ"
+ },
+ "catalog__topi-bra__topi": {
+  "slugs": [
+   "zhilet-top-gorechavka"
+  ],
+  "descs": {
+   "zhilet-top-gorechavka": "Жилет-топ двубортный прямого кроя с воланом."
+  },
+  "title": "Топы"
+ },
+ "catalog__topi-bra__topi__expert.html": [],
+ "catalog__topi-bra__topi__novichok": {
+  "slugs": [
+   "zhilet-top-gorechavka"
+  ],
+  "descs": {
+   "zhilet-top-gorechavka": "Жилет-топ двубортный прямого кроя с воланом."
+  },
+  "title": "НОВИЧОК"
+ },
+ "catalog__topi-bra__topi__specialist.html": [],
+ "catalog__verhnjaja-odezhda": {
+  "slugs": [
+   "kurtka-krassula",
+   "palto-kalendula-27332"
+  ],
+  "descs": {
+   "kurtka-krassula": "Утепленная куртка-рубашка из микровельвета",
+   "palto-kalendula-27332": "Пальто свободного кроя асимметричной длины, двубортное"
+  },
+  "title": "Верхняя одежда"
+ },
+ "catalog__verhnjaja-odezhda__kurtki": {
+  "slugs": [
+   "kurtka-krassula"
+  ],
+  "descs": {
+   "kurtka-krassula": "Утепленная куртка-рубашка из микровельвета"
+  },
+  "title": "Куртки"
+ },
+ "catalog__verhnjaja-odezhda__kurtki__ekspert.html": [],
+ "catalog__verhnjaja-odezhda__kurtki__novichok": {
+  "slugs": [
+   "kurtka-krassula"
+  ],
+  "descs": {
+   "kurtka-krassula": "Утепленная куртка-рубашка из микровельвета"
+  },
+  "title": "НОВИЧОК"
+ },
+ "catalog__verhnjaja-odezhda__kurtki__spetsialist.html": [],
+ "catalog__verhnjaja-odezhda__palto": {
+  "slugs": [
+   "palto-kalendula-27332"
+  ],
+  "descs": {
+   "palto-kalendula-27332": "Пальто свободного кроя асимметричной длины, двубортное"
+  },
+  "title": "Пальто"
+ },
+ "catalog__verhnjaja-odezhda__palto__ekspert.html": [],
+ "catalog__verhnjaja-odezhda__palto__novichok.html": [],
+ "catalog__verhnjaja-odezhda__palto__spetsialist": {
+  "slugs": [
+   "palto-kalendula-27332"
+  ],
+  "descs": {
+   "palto-kalendula-27332": "Пальто свободного кроя асимметричной длины, двубортное"
+  },
+  "title": "СПЕЦИАЛИСТ"
+ }
+}

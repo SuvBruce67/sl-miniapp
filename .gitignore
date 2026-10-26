@@ -1,0 +1,8 @@
+# Исходные материалы — не публикуем (там личные документы и фото)
+sl-phto/
+sl-colour/
+.claude/
+
+node_modules/
+.DS_Store
+Thumbs.db

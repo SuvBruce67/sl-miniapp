@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#fff9f2">
+  <title>Straight Lines — выкройки прямого кроя</title>
+  <link rel="icon" href="img/ui/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arsenal+SC:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/app.css?v=1">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="root" id="root">
+      <header class="brandbar">
+        <button class="brandbar__logo" data-action="tab" data-tab="catalog" aria-label="На главную">
+          <img src="img/ui/logo.png" alt="Straight Lines" width="64" height="64">
+        </button>
+        <div class="brandbar__text">
+          <div class="brandbar__name">[ Straight Lines ]</div>
+          <div class="brandbar__tagline">Онлайн-магазин выкроек одежды прямого кроя</div>
+          <div class="brandbar__contacts">
+            <button data-action="mail">info@sl-ls.ru</button>
+            <span class="dot"></span>
+            <button data-action="tg">@straightlines</button>
+          </div>
+        </div>
+      </header>
+
+      <nav class="tabs" id="tabs">
+        <button class="tabs__item" data-action="tab" data-tab="catalog">Каталог</button>
+        <button class="tabs__item" data-action="tab" data-tab="services">Услуги</button>
+        <button class="tabs__item" data-action="tab" data-tab="help">Помощь</button>
+        <button class="tabs__item" data-action="tab" data-tab="contacts">Контакты</button>
+        <span class="tabs__ink" id="tabsInk"></span>
+      </nav>
+
+      <main class="tabview" id="tabview"></main>
+    </div>
+
+    <div class="stack" id="stack"></div>
+
+    <button class="cartfab" id="cartfab" data-action="cart" aria-label="Корзина">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 7h12l-1.2 12.2a1 1 0 0 1-1 .8H8.2a1 1 0 0 1-1-.8L6 7Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 9V6a3 3 0 0 1 6 0v3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      <span class="cartfab__label">Корзина</span>
+      <span class="cartfab__count" id="cartCount">0</span>
+    </button>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="lightbox" id="lightbox" hidden></div>
+  </div>
+
+  <!-- ?v= меняем при каждом обновлении, иначе Telegram показывает старую версию из кэша -->
+  <script src="js/content.js?v=1"></script>
+  <script src="js/catalog.js?v=1"></script>
+  <script src="js/app.js?v=1"></script>
+</body>
+</html>
