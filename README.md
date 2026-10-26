@@ -35,6 +35,12 @@ node tools/serve.mjs
 
 Потом открыть http://localhost:5173. Прямые ссылки: `?startapp=p_takka` (товар), `?startapp=s_3d-scan` (услуга), `?startapp=l_novice` (уровень).
 
+## Где работает
+
+- Сайт: https://suvbruce67.github.io/sl-miniapp/ (GitHub Pages, обновляется сам после каждого push в `main`)
+- Бот: [@straightlines_bot](https://t.me/straightlines_bot), кнопка меню «Каталог»
+- Картинка 640×360 для BotFather: `bot/miniapp-640x360.png`
+
 ## Как подключить к Telegram
 
 1. Выложить папку `app/` на любой хостинг с HTTPS (GitHub Pages, Netlify, Vercel).
