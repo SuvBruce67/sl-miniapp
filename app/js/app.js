@@ -69,30 +69,47 @@
     if (inTelegram && tg.openTelegramLink) tg.openTelegramLink(url);
     else window.open(url, '_blank', 'noopener');
   }
+  // Копирование. Сначала синхронно через execCommand — пока жив жест пользователя:
+  // в Telegram Desktop (WebView2) асинхронный clipboard API без жеста молча не срабатывает.
+  // Возвращает Promise<boolean> с реальным результатом — тост пишем только по нему.
   function copy(text) {
-    const done = () => true;
-    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text).then(done, () => fallbackCopy(text));
-    return Promise.resolve(fallbackCopy(text));
+    if (execCopy(text)) return Promise.resolve(true);
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text).then(() => true, () => false);
+    return Promise.resolve(false);
   }
-  function fallbackCopy(text) {
+  function execCopy(text) {
+    const active = document.activeElement;
     const ta = document.createElement('textarea');
-    ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
-    document.body.appendChild(ta); ta.select();
-    let ok = false; try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
-    ta.remove(); return ok;
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;pointer-events:none';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    ta.setSelectionRange(0, text.length);
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    ta.remove();
+    if (active && active.focus) active.focus({ preventScroll: true });
+    return ok;
   }
-  function openMail(subject = '', body = '') {
-    const href = `mailto:${C.email}` + (subject || body ? `?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}` : '');
-    haptic();
+  function copyWithToast(text, okText) {
+    return copy(text).then(ok => { toast(ok ? okText : 'Не удалось скопировать: ' + text); return ok; });
+  }
+  function openHref(href) {
     const a = document.createElement('a'); a.href = href; a.style.display = 'none';
     document.body.appendChild(a); a.click(); a.remove();
-    if (inTelegram) copy(C.email).then(() => toast('Адрес ' + C.email + ' скопирован'));
+  }
+  function openMail(subject = '', body = '') {
+    haptic();
+    // копируем до перехода по mailto: на ПК почтовый клиент может не открыться, а адрес останется в буфере
+    if (inTelegram && !body) copyWithToast(C.email, 'Адрес ' + C.email + ' скопирован');
+    openHref(`mailto:${C.email}` + (subject || body ? `?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}` : ''));
   }
   function openPhone() {
     haptic();
-    const a = document.createElement('a'); a.href = 'tel:' + C.phone; a.style.display = 'none';
-    document.body.appendChild(a); a.click(); a.remove();
-    if (inTelegram) copy(C.phoneView).then(() => toast('Номер скопирован'));
+    if (inTelegram) copyWithToast(C.phoneView, 'Номер ' + C.phoneView + ' скопирован');
+    openHref('tel:' + C.phone);
   }
 
   let toastTimer;
@@ -145,7 +162,7 @@
   function updateCartUI() {
     const n = cartCount();
     $('#cartCount').textContent = n;
-    $('#cartfab').classList.toggle('is-visible', n > 0);
+    $('#cartfab').classList.toggle('is-empty', n === 0);
     $$('.topbar__badge').forEach(b => { b.textContent = n; b.dataset.n = n; });
   }
 
@@ -184,7 +201,8 @@
   // ---------- Вкладки ----------
   const TABS = ['catalog', 'services', 'help', 'contacts'];
   let currentTab = 'catalog';
-  let openLevel = store.get('openLevel', 'novice');
+  // При запуске все уровни закрыты — человек сам выбирает, что раскрыть
+  let openLevel = '';
   let searchQuery = '';
 
   function setTab(tab, opts = {}) {
@@ -206,7 +224,7 @@
     const v = $('#tabview');
     const html = { catalog: catalogHTML, services: servicesHTML, help: helpHTML, contacts: contactsHTML }[currentTab]();
     v.innerHTML = `<div class="tabpane">${html}</div>`;
-    if (currentTab === 'catalog') bindSearch();
+    if (currentTab === 'catalog') { bindSearch(); preloadLevelImages(); }
   }
 
   function catalogHTML() {
@@ -253,10 +271,10 @@
         </div>
         <div class="level__thumbs">${thumbs}</div>
       </button>
-      <div class="level__body"><div class="level__inner"><div class="level__content">
+      <div class="level__body"${isOpen ? ' style="height:auto"' : ''}><div class="level__inner"><div class="level__content">
         <div class="types">
           ${types.map(t => `<button class="type" data-action="list" data-level="${l.id}" data-type="${t.id}">
-            <img src="${photo(t.items[0])}" alt="" loading="lazy">
+            <img src="${photo(t.items[0])}" alt="" loading="lazy" decoding="async">
             <span class="type__label">${t.title}<span class="type__count">${t.items.length}</span></span>
           </button>`).join('')}
         </div>
@@ -282,32 +300,62 @@
     input.addEventListener('input', () => {
       searchQuery = input.value;
       $('#search').classList.toggle('has-value', !!searchQuery);
-      $('#catalogBody').innerHTML = searchQuery.trim() ? searchResultsHTML() : levelsHTML();
+      if (searchQuery.trim()) $('#catalogBody').innerHTML = searchResultsHTML(); else { $('#catalogBody').innerHTML = levelsHTML(); preloadLevelImages(); }
     });
     input.addEventListener('keydown', e => { if (e.key === 'Enter') input.blur(); });
+  }
+
+  // Раскрытие через анимацию height (от 0 до реальной высоты, потом auto)
+  function setLevelOpen(el, open) {
+    const body = $('.level__body', el);
+    $('.level__head', el).setAttribute('aria-expanded', String(open));
+    if (open === el.classList.contains('is-open')) return;
+    const from = body.getBoundingClientRect().height;
+    el.classList.toggle('is-open', open);
+    const to = open ? body.scrollHeight : 0;
+    body.style.height = from + 'px';
+    void body.offsetHeight;
+    body.style.height = to + 'px';
+    const done = e => {
+      if (e && e.target !== body) return;
+      body.removeEventListener('transitionend', done);
+      clearTimeout(body._t);
+      if (el.classList.contains('is-open')) body.style.height = 'auto';
+    };
+    body.addEventListener('transitionend', done);
+    clearTimeout(body._t);
+    body._t = setTimeout(done, 520); // если transitionend не придёт (вкладка в фоне, отключённые анимации)
   }
 
   function toggleLevel(id) {
     const el = $(`.level[data-level="${id}"]`);
     const willOpen = !el.classList.contains('is-open');
-    $$('.level').forEach(x => { x.classList.remove('is-open'); $('.level__head', x).setAttribute('aria-expanded', 'false'); });
+    $$('.level').forEach(x => { if (x !== el) setLevelOpen(x, false); });
+    setLevelOpen(el, willOpen);
     if (willOpen) {
-      el.classList.add('is-open');
-      $('.level__head', el).setAttribute('aria-expanded', 'true');
       setTimeout(() => {
         const r = el.getBoundingClientRect();
-        const top = r.top + window.scrollY - $('#tabs').offsetHeight - 10;
-        if (r.top < $('#tabs').offsetHeight || r.top > window.innerHeight * .45) window.scrollTo({ top, behavior: 'smooth' });
-      }, 480);
+        const tabsH = $('#tabs').offsetHeight;
+        if (r.top < tabsH || r.top > window.innerHeight * .45) window.scrollTo({ top: r.top + window.scrollY - tabsH - 10, behavior: 'smooth' });
+      }, 440);
     }
     openLevel = willOpen ? id : '';
-    store.set('openLevel', openLevel);
     haptic('select');
+  }
+
+  // Заранее загружаем и декодируем фото плиток, чтобы раскрытие не дёргалось на первом кадре
+  function preloadLevelImages() {
+    const run = () => $$('.level__body img').forEach(img => {
+      img.loading = 'eager';
+      if (img.decode) img.decode().catch(() => {});
+    });
+    if ('requestIdleCallback' in window) requestIdleCallback(run, { timeout: 1500 });
+    else setTimeout(run, 600);
   }
 
   function servicesHTML() {
     return `<section class="section">
-      <div class="h-eyebrow">Straight Lines</div>
+      <div class="h-eyebrow">Сделаем под ваш запрос</div>
       <h2 class="h-title" style="margin:6px 0 16px">Услуги</h2>
       <div class="rows">${C.services.map((s, i) => `
         <button class="row" style="--i:${i}" data-action="service" data-id="${s.id}">
@@ -318,6 +366,13 @@
       </div>
     </section>`;
   }
+
+  // Иконки 18×18 для кружков «Информации»; толщину линии (1px) задаёт CSS .row__q svg
+  const INFO_ICON = {
+    ruble: '<svg viewBox="0 0 18 18" aria-hidden="true"><path d="M7.5 14.5v-11h3.25a3 3 0 0 1 0 6H5.5M5.5 11.75h5.5"/></svg>',
+    truck: '<svg viewBox="0 0 18 18" aria-hidden="true"><path d="M1.5 4.5h9v7.5h-9zM10.5 7.5h3.2l2.8 2.9v1.6h-6"/><circle cx="4.75" cy="13" r="1.6" style="fill:var(--paper)"/><circle cx="13.25" cy="13" r="1.6" style="fill:var(--paper)"/></svg>',
+    refund: '<svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3.2 6.6A6.25 6.25 0 1 1 2.75 9M3.2 2.9v3.7h3.7"/><path d="M8.2 12.4V5.8h1.9a1.75 1.75 0 0 1 0 3.5H7M7 10.9h3.2"/></svg>'
+  };
 
   function helpHTML() {
     const rows = (list, offset = 0) => list.map((h, i) => `
@@ -336,7 +391,7 @@
       <h3 class="h-sub" style="margin-bottom:12px">Информация</h3>
       <div class="rows">${C.info.map((h, i) => `
         <button class="row" style="--i:${i + 7}" data-action="link" data-url="${h.url}">
-          <span class="row__q" style="border-color:var(--brown);color:var(--brown)">i</span>
+          <span class="row__q" style="border-color:var(--brown);color:var(--brown)">${INFO_ICON[h.icon] || 'i'}</span>
           <span class="row__title" style="text-transform:none;letter-spacing:.02em;font-size:17px">${esc(h.title)}</span>
           <span class="row__icon">${ICON.ext}</span>
         </button>`).join('')}</div>
@@ -357,7 +412,7 @@
     </section>
 
     <section class="section">
-      <div class="h-eyebrow">Straight Lines</div>
+      <div class="h-eyebrow">Философия бренда</div>
       <h2 class="h-title" style="margin:6px 0 14px">О бренде</h2>
       <img class="about-img" src="img/ui/about.webp" alt="Straight Lines" loading="lazy">
       <p class="lead" style="margin-top:14px">${esc(a.lead)}</p>
@@ -838,8 +893,11 @@
       if (!b) return;
       const kind = b.dataset.send;
       copy(order.text).then(ok => {
-        if (kind === 'copy') { toast(ok === false ? 'Не удалось скопировать' : 'Текст заказа скопирован'); haptic('success'); return; }
-        if (kind === 'tg') { toast('Текст заказа скопирован — вставьте его в чат'); setTimeout(openTelegram, 600); }
+        if (kind === 'copy') { toast(ok ? 'Текст заказа скопирован' : 'Не удалось скопировать — выделите текст выше вручную'); haptic(ok ? 'success' : 'error'); return; }
+        if (kind === 'tg') {
+          if (!ok) { toast('Не удалось скопировать — выделите текст выше вручную'); haptic('error'); return; }
+          toast('Текст заказа скопирован — вставьте его в чат'); setTimeout(openTelegram, 600);
+        }
         if (kind === 'mail') openMail('Заказ ' + order.no, order.text);
         if (!sent) { sent = true; cart = []; saveCart(); }
       });
@@ -877,7 +935,7 @@
         searchQuery = '';
         const inp = $('#searchInput'); if (inp) inp.value = '';
         $('#search').classList.remove('has-value');
-        $('#catalogBody').innerHTML = levelsHTML();
+        $('#catalogBody').innerHTML = levelsHTML(); preloadLevelImages();
         break;
       }
       case 'to-catalog': case 'finish': finishOrder(); break;
