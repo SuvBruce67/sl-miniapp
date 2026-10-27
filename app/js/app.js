@@ -238,7 +238,9 @@
   }
 
   function levelsHTML() {
-    const free = productsFor('all', 'besplatnye');
+    // раздел бесплатных выкроек помечен free:true при синхронизации (tools/sync/sync.mjs)
+    const freeType = TYPES.find(t => t.free) || TYPES.find(t => t.id === 'besplatnye');
+    const free = freeType ? productsFor('all', freeType.id) : [];
     return `
       <section class="section">
         <div class="section__head">
@@ -247,7 +249,7 @@
         <div class="levels">${LEVELS.map(levelHTML).join('')}</div>
       </section>
       ${free.length ? `<section class="section">
-        <button class="promo" data-action="list" data-level="all" data-type="besplatnye">
+        <button class="promo" data-action="list" data-level="all" data-type="${freeType.id}">
           <div>
             <div class="promo__title">Бесплатные выкройки</div>
             <div class="promo__text">${free.map(p => esc(p.name)).join(' · ')}</div>

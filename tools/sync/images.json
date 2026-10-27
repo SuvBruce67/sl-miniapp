@@ -1,0 +1,786 @@
+{
+ "/pictures/tovar/original/ciklam-prev.jpg": {
+  "f": "bluza-ciklamen-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/cik1.jpg": {
+  "f": "bluza-ciklamen-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/cik2.jpg": {
+  "f": "bluza-ciklamen-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/cik3.jpg": {
+  "f": "bluza-ciklamen-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/ciklam-over.jpg": {
+  "f": "bluza-ciklamen-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/kalla-prev.jpg": {
+  "f": "bluza-kalla-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/k1.jpg": {
+  "f": "bluza-kalla-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/k2.jpg": {
+  "f": "bluza-kalla-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/k3.jpg": {
+  "f": "bluza-kalla-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/kalla-over.jpg": {
+  "f": "bluza-kalla-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/preview_2.jpg": {
+  "f": "bluza-lilija-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/22_2.jpg": {
+  "f": "bluza-lilija-2.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/23_1.jpg": {
+  "f": "bluza-lilija-3.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/24.jpg": {
+  "f": "bluza-lilija-4.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/overview_2.jpg": {
+  "f": "bluza-lilija-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/preview2.jpg": {
+  "f": "bluza-primula-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/photo2.jpg": {
+  "f": "bluza-primula-2.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/photo3.jpg": {
+  "f": "bluza-primula-3.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/overview_2.png": {
+  "f": "bluza-primula-4.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/brah-prev.jpg": {
+  "f": "bra-brahioma-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/bra1.jpg": {
+  "f": "bra-brahioma-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/bra2.jpg": {
+  "f": "bra-brahioma-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/brah-over.jpg": {
+  "f": "bra-brahioma-4.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/preview_1.jpg": {
+  "f": "brjuki-gejhera-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/21.jpg": {
+  "f": "brjuki-gejhera-2.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/22_1.jpg": {
+  "f": "brjuki-gejhera-3.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/23.jpg": {
+  "f": "brjuki-gejhera-4.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/overview_1.jpg": {
+  "f": "brjuki-gejhera-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/mus-prev.jpg": {
+  "f": "bruki-muskari-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/mu1.jpg": {
+  "f": "bruki-muskari-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/mu2.jpg": {
+  "f": "bruki-muskari-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/mu3.jpg": {
+  "f": "bruki-muskari-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/mus-over.jpg": {
+  "f": "bruki-muskari-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/17dlp16442422_plat`e-delfinium.prev`u_1.jpg": {
+  "f": "depfinium-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/spina.jpg": {
+  "f": "depfinium-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/ruka.jpg": {
+  "f": "depfinium-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/pravo.jpg": {
+  "f": "depfinium-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/17dlp16442422_delf-over.jpg": {
+  "f": "depfinium-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/gvoz-prev.jpg": {
+  "f": "djemper-gvozdika-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/gv1.jpg": {
+  "f": "djemper-gvozdika-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/gv2.jpg": {
+  "f": "djemper-gvozdika-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/gv3.jpg": {
+  "f": "djemper-gvozdika-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/gv4.jpg": {
+  "f": "djemper-gvozdika-5.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/gvoz-over.jpg": {
+  "f": "djemper-gvozdika-6.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/magn-prev.jpg": {
+  "f": "djemper-magnoliya-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/m2.jpg": {
+  "f": "djemper-magnoliya-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/m3.jpg": {
+  "f": "djemper-magnoliya-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/m4.jpg": {
+  "f": "djemper-magnoliya-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/magn-over.jpg": {
+  "f": "djemper-magnoliya-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/rudb-over_1.jpg": {
+  "f": "djemper-rubekiya-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/r1.jpg": {
+  "f": "djemper-rubekiya-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/r2.jpg": {
+  "f": "djemper-rubekiya-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/r3.jpg": {
+  "f": "djemper-rubekiya-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/rudb-prev.jpg": {
+  "f": "djemper-rubekiya-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/tat-prev.jpg": {
+  "f": "djemper-tatarnik-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/t1.jpg": {
+  "f": "djemper-tatarnik-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/t2.jpg": {
+  "f": "djemper-tatarnik-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/t3.jpg": {
+  "f": "djemper-tatarnik-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/tat-over.jpg": {
+  "f": "djemper-tatarnik-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/djo-prev.jpg": {
+  "f": "djoggery-edelveys-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/dj1.jpg": {
+  "f": "djoggery-edelveys-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/dj2.jpg": {
+  "f": "djoggery-edelveys-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/dj3.jpg": {
+  "f": "djoggery-edelveys-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/dj4.jpg": {
+  "f": "djoggery-edelveys-5.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/dj5.jpg": {
+  "f": "djoggery-edelveys-6.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/djo-over.jpg": {
+  "f": "djoggery-edelveys-7.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/pre_2.jpg": {
+  "f": "dojdevik-drakunkulus-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/1_8.jpg": {
+  "f": "dojdevik-drakunkulus-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/2_8.jpg": {
+  "f": "dojdevik-drakunkulus-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/3_7.jpg": {
+  "f": "dojdevik-drakunkulus-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/4_3.jpg": {
+  "f": "dojdevik-drakunkulus-5.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/5_2.jpg": {
+  "f": "dojdevik-drakunkulus-6.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/6_1.jpg": {
+  "f": "dojdevik-drakunkulus-7.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/7.jpg": {
+  "f": "dojdevik-drakunkulus-8.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/ove.jpg": {
+  "f": "dojdevik-drakunkulus-9.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/prev_7.jpg": {
+  "f": "eskiz-vyshivki-roza-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/mnoga.jpg": {
+  "f": "eskiz-vyshivki-roza-2.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/malo.jpg": {
+  "f": "eskiz-vyshivki-roza-3.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/1_9.jpg": {
+  "f": "eskiz-vyshivki-roza-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/2_9.jpg": {
+  "f": "eskiz-vyshivki-roza-5.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/galantus.jpg": {
+  "f": "galantus-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/1_(3).jpg": {
+  "f": "galantus-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/2_(3).jpg": {
+  "f": "galantus-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/3_(3).jpg": {
+  "f": "galantus-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/4_(2).jpg": {
+  "f": "galantus-5.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/5.jpg": {
+  "f": "galantus-6.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/6.jpg": {
+  "f": "galantus-7.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/galantus.over.jpg": {
+  "f": "galantus-8.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/gib-prev.jpg": {
+  "f": "gibiskus-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/gib1.jpg": {
+  "f": "gibiskus-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/gib2.jpg": {
+  "f": "gibiskus-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/gib3.jpg": {
+  "f": "gibiskus-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/gib-over.jpg": {
+  "f": "gibiskus-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/pre_1.jpg": {
+  "f": "jaket-gorchica-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/1_4.jpg": {
+  "f": "jaket-gorchica-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/2_4.jpg": {
+  "f": "jaket-gorchica-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/3_3.jpg": {
+  "f": "jaket-gorchica-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/4_2.jpg": {
+  "f": "jaket-gorchica-5.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/ovr.jpg": {
+  "f": "jaket-gorchica-6.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/prev_2.jpg": {
+  "f": "jilet-roza-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/1_3.jpg": {
+  "f": "jilet-roza-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/2_3.jpg": {
+  "f": "jilet-roza-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/3_2.jpg": {
+  "f": "jilet-roza-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/over_3.jpg": {
+  "f": "jilet-roza-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/prev_5.jpg": {
+  "f": "kardigan-kurkuma-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/1_7.jpg": {
+  "f": "kardigan-kurkuma-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/2_7.jpg": {
+  "f": "kardigan-kurkuma-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/3_6.jpg": {
+  "f": "kardigan-kurkuma-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/over_6.jpg": {
+  "f": "kardigan-kurkuma-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/preview_3.jpg": {
+  "f": "kurtka-krassula-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/photo2_2.jpg": {
+  "f": "kurtka-krassula-2.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/photo3_2.jpg": {
+  "f": "kurtka-krassula-3.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/photo4.jpg": {
+  "f": "kurtka-krassula-4.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/photo5.jpg": {
+  "f": "kurtka-krassula-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/overview_3.jpg": {
+  "f": "kurtka-krassula-6.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/prev.jpg": {
+  "f": "mini-ubka-tatrnik-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/1_1.jpg": {
+  "f": "mini-ubka-tatrnik-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/2_1.jpg": {
+  "f": "mini-ubka-tatrnik-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/over_1.jpg": {
+  "f": "mini-ubka-tatrnik-4.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/prev_4.jpg": {
+  "f": "modul-dlini-gorchica-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/1_6.jpg": {
+  "f": "modul-dlini-gorchica-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/2_6.jpg": {
+  "f": "modul-dlini-gorchica-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/3_5.jpg": {
+  "f": "modul-dlini-gorchica-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/over_5.jpg": {
+  "f": "modul-dlini-gorchica-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/preview.png": {
+  "f": "palto-kalendula-27332-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/side.jpg": {
+  "f": "palto-kalendula-27332-2.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/back.jpg": {
+  "f": "palto-kalendula-27332-3.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/14.jpg": {
+  "f": "palto-kalendula-27332-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/16.jpg": {
+  "f": "palto-kalendula-27332-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/17.jpg": {
+  "f": "palto-kalendula-27332-6.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/overview.png": {
+  "f": "palto-kalendula-27332-7.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/prev_6.jpg": {
+  "f": "ridikul-oduvanchik-1.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/over_7.jpg": {
+  "f": "ridikul-oduvanchik-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/naper-prev.jpg": {
+  "f": "rubashka-naperstyanka-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/nap1.jpg": {
+  "f": "rubashka-naperstyanka-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/nap2.jpg": {
+  "f": "rubashka-naperstyanka-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/nap3.jpg": {
+  "f": "rubashka-naperstyanka-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/naper-over.jpg": {
+  "f": "rubashka-naperstyanka-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/nas-prev.jpg": {
+  "f": "rubashka-nasturciya-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/n1.jpg": {
+  "f": "rubashka-nasturciya-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/n2.jpg": {
+  "f": "rubashka-nasturciya-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/nas-over.jpg": {
+  "f": "rubashka-nasturciya-4.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/fuks-prev.jpg": {
+  "f": "sarafan-fuksiya-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/f1.jpg": {
+  "f": "sarafan-fuksiya-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/f2.jpg": {
+  "f": "sarafan-fuksiya-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/f3.jpg": {
+  "f": "sarafan-fuksiya-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/f4.jpg": {
+  "f": "sarafan-fuksiya-5.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/fuks-over.jpg": {
+  "f": "sarafan-fuksiya-6.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/1923_shopper_preview.jpg": {
+  "f": "shopper-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/1923_shopper_overview.jpg": {
+  "f": "shopper-2.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/pre.jpg": {
+  "f": "shorty-kalla-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/1.jpg": {
+  "f": "shorty-kalla-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/2.jpg": {
+  "f": "shorty-kalla-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/3.jpg": {
+  "f": "shorty-kalla-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/4.jpg": {
+  "f": "shorty-kalla-5.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/over.jpg": {
+  "f": "shorty-kalla-6.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/preview_1.png": {
+  "f": "takka-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/2.png": {
+  "f": "takka-2.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/3.png": {
+  "f": "takka-3.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/4.png": {
+  "f": "takka-4.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/overview_1.png": {
+  "f": "takka-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/prev_3.jpg": {
+  "f": "trench-gorchica-modul-dlini-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/1_5.jpg": {
+  "f": "trench-gorchica-modul-dlini-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/over_4.jpg": {
+  "f": "trench-gorchica-modul-dlini-3.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/prev_9.jpg": {
+  "f": "tri-rozi-1.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/mnoga_2.jpg": {
+  "f": "tri-rozi-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/malo_2.jpg": {
+  "f": "tri-rozi-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/prev_1.jpg": {
+  "f": "ubka-akvilegiya-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/1_2.jpg": {
+  "f": "ubka-akvilegiya-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/2_2.jpg": {
+  "f": "ubka-akvilegiya-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/3_1.jpg": {
+  "f": "ubka-akvilegiya-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/4_1.jpg": {
+  "f": "ubka-akvilegiya-5.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/5_1.jpg": {
+  "f": "ubka-akvilegiya-6.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/over_2.jpg": {
+  "f": "ubka-akvilegiya-7.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/ub-prev.jpg": {
+  "f": "ubka-artishok-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/11.jpg": {
+  "f": "ubka-artishok-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/22.jpg": {
+  "f": "ubka-artishok-3.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/33.jpg": {
+  "f": "ubka-artishok-4.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/ub-over.jpg": {
+  "f": "ubka-artishok-5.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/pre_3.jpg": {
+  "f": "vishivka-gvozdika-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/over_8.jpg": {
+  "f": "vishivka-gvozdika-2.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/1_10.jpg": {
+  "f": "vishivka-gvozdika-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/2_10.jpg": {
+  "f": "vishivka-gvozdika-4.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/3_8.jpg": {
+  "f": "vishivka-gvozdika-5.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/4_4.jpg": {
+  "f": "vishivka-gvozdika-6.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/prev_8.jpg": {
+  "f": "vishivka-tatarnik-1.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/malo_1.jpg": {
+  "f": "vishivka-tatarnik-2.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/mnoga_1.jpg": {
+  "f": "vishivka-tatarnik-3.webp",
+  "src": "local"
+ },
+ "/pictures/tovar/original/preview2_1.jpg": {
+  "f": "yubka-primula-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/photo2_1.jpg": {
+  "f": "yubka-primula-2.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/photo3_1.jpg": {
+  "f": "yubka-primula-3.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/overview_3.png": {
+  "f": "yubka-primula-4.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/preview.jpg": {
+  "f": "zhilet-top-gorechavka-1.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/6_2.jpg": {
+  "f": "zhilet-top-gorechavka-2.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/7_1.jpg": {
+  "f": "zhilet-top-gorechavka-3.webp",
+  "src": "site"
+ },
+ "/pictures/tovar/original/overview.jpg": {
+  "f": "zhilet-top-gorechavka-4.webp",
+  "src": "site"
+ }
+}

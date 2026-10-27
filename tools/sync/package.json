@@ -1,0 +1,9 @@
+{
+  "name": "sl-catalog-sync",
+  "private": true,
+  "type": "module",
+  "description": "Синхронизация каталога мини-приложения с сайтом sl-ls.ru",
+  "dependencies": {
+    "sharp": "0.33.5"
+  }
+}

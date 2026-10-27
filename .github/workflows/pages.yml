@@ -1,19 +1,24 @@
-# Публикует папку app/ на GitHub Pages при каждом push в main
+# Публикация мини-приложения на GitHub Pages.
+# - при каждом push в main — сразу публикует папку app/;
+# - каждый день в 06:00 по Москве (и по кнопке Run workflow) — сначала синхронизирует каталог с sl-ls.ru,
+#   сохраняет изменения в репозиторий и публикует.
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '0 3 * * *'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -23,6 +28,32 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+
+      - name: Set up Node
+        if: github.event_name != 'push'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Sync catalog with sl-ls.ru
+        if: github.event_name != 'push'
+        run: |
+          npm install --prefix tools/sync --no-audit --no-fund
+          node tools/sync/sync.mjs
+
+      - name: Commit catalog changes
+        if: github.event_name != 'push'
+        run: |
+          if git status --porcelain app tools/sync/images.json | grep -q .; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add app tools/sync/images.json
+            git commit -m "Синхронизация каталога с sl-ls.ru"
+            git push
+          else
+            echo "Каталог не изменился"
+          fi
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
