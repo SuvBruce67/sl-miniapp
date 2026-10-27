@@ -1,0 +1,6 @@
+name = "straightlines-bot"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+# Токен бота задаётся секретом, а не здесь:
+#   npx wrangler secret put BOT_TOKEN

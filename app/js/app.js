@@ -947,7 +947,9 @@
   function start() {
     initTelegram();
     try { history.replaceState({ depth: 0 }, '', location.hash || '#catalog'); } catch (e) { /* noop */ }
-    const initial = (location.hash || '').replace('#', '');
+    // Вкладка при запуске: ?tab=services из кнопок бота (хеш в Telegram занят служебными данными) или #services
+    const qTab = new URLSearchParams(location.search).get('tab');
+    const initial = TABS.includes(qTab) ? qTab : (location.hash || '').replace('#', '');
     setTab(TABS.includes(initial) ? initial : 'catalog', { silent: true });
     updateCartUI();
 
