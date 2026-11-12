@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Письмо в Straight Lines</title>
+  <style>
+    @font-face{font-family:GOST;src:url('fonts/GOST_A.ttf') format('truetype');font-display:swap}
+    *{box-sizing:border-box}body{margin:0;background:#fff9f2;color:#1d1d1b;font-family:GOST,Arial,sans-serif;font-size:21px;line-height:1.45}
+    main{max-width:600px;margin:8vh auto;padding:24px}img{width:68px;height:68px}h1{font-size:32px;font-weight:400;margin:20px 0 12px}
+    p{margin:12px 0}a{color:inherit}button,a.button{font:inherit;display:block;width:100%;padding:14px 18px;border:1px solid #d5cfbd;border-radius:4px;background:transparent;text-align:center;text-decoration:none;cursor:pointer}
+    a.primary{background:#88b04b;border-color:#88b04b;color:#fff;margin:22px 0 16px}.choices{display:flex;gap:8px;flex-wrap:wrap}.choices a{flex:1;min-width:110px;font-size:18px}
+    details{margin-top:24px}summary{cursor:pointer}textarea{width:100%;min-height:240px;padding:14px;border:1px solid #d5cfbd;background:#fff;font:inherit;resize:vertical;margin:12px 0}
+    small{display:block;color:#68675d;font-size:17px;margin-top:14px}
+  </style>
+</head>
+<body>
+  <main>
+    <img src="img/ui/logo.png" alt="Straight Lines">
+    <h1>Письмо в Straight Lines</h1>
+    <p>Кому: <strong>info@sl-ls.ru</strong></p>
+    <p id="status">Если письмо не открылось автоматически, нажмите кнопку ниже. Адрес, тема и текст уже заполнены.</p>
+    <a class="button primary" id="compose">Открыть письмо в почтовом приложении</a>
+    <p>Или откройте письмо в своей веб-почте:</p>
+    <div class="choices">
+      <a class="button" id="gmail" rel="noreferrer">Gmail</a>
+      <a class="button" id="yandex" rel="noreferrer">Яндекс Почта</a>
+      <a class="button" id="outlook" rel="noreferrer">Outlook</a>
+    </div>
+    <small>Для отправки нужна настроенная почтовая программа или вход в вашу веб-почту. Письмо отправится только после вашего подтверждения.</small>
+    <details><summary>Посмотреть текст письма</summary><p id="subject"></p><textarea id="body" readonly aria-label="Текст письма"></textarea></details>
+  </main>
+  <script src="js/mail.js?v=1"></script>
+</body>
+</html>

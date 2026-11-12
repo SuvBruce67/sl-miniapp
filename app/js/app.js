@@ -106,8 +106,12 @@
   }
   function openMail(subject = '', body = '') {
     haptic();
-    // копируем до перехода по mailto: на ПК почтовый клиент может не открыться, а адрес останется в буфере
-    if (inTelegram && !body) copyWithToast(C.email, 'Адрес ' + C.email + ' скопирован');
+    if (inTelegram) {
+      const page = new URL('mail.html', window.location.href);
+      page.hash = encodeURIComponent(JSON.stringify({ subject, body }));
+      tg.openLink(page.href, { try_instant_view: false });
+      return;
+    }
     openHref(mailHref(subject, body));
   }
   function openPhone() {
@@ -899,7 +903,11 @@
       if (!b) return;
       const kind = b.dataset.send;
       // Ссылка mailto должна открываться непосредственно при клике, без ожидания clipboard API.
-      if (kind === 'mail') { haptic(); return; }
+      if (kind === 'mail') {
+        if (inTelegram) { e.preventDefault(); openMail('Заказ ' + order.no, order.text); }
+        else haptic();
+        return;
+      }
       copy(order.text).then(ok => {
         if (kind === 'copy') { toast(ok ? 'Текст заказа скопирован' : 'Не удалось скопировать — выделите текст выше вручную'); haptic(ok ? 'success' : 'error'); return; }
         if (kind === 'tg') {
