@@ -451,10 +451,11 @@
 
   // ---------- Стек экранов ----------
   const stack = [];
+  let returningHome = false;
   function topbar(title, eyebrow = '', withCart = true) {
     return `<div class="topbar">
       <button class="topbar__btn topbar__back" data-action="back" aria-label="Назад">${ICON.back}</button>
-      <div class="topbar__title"><div class="h-sub">${esc(title)}</div>${eyebrow ? `<div class="h-eyebrow">${esc(eyebrow)}</div>` : ''}</div>
+      <button class="topbar__title" data-action="home" aria-label="Straight Lines — на главную"><span class="topbar__brand">Straight Lines</span><div class="h-sub">${esc(title)}</div>${eyebrow ? `<div class="h-eyebrow">${esc(eyebrow)}</div>` : ''}</button>
       ${withCart ? `<button class="topbar__btn" data-action="cart" aria-label="Корзина">${ICON.bag}<span class="topbar__badge" data-n="${cartCount()}">${cartCount()}</span></button>` : '<span></span>'}
     </div>`;
   }
@@ -500,12 +501,38 @@
   }
 
   window.addEventListener('popstate', e => {
+    if (returningHome) {
+      returningHome = false;
+      history.replaceState({ depth: 0 }, '', '#catalog');
+      return;
+    }
     const depth = (e.state && e.state.depth) || 0;
     if ($('#lightbox').hidden === false) { closeLightbox(true); return; }
     while (stack.length > depth) popScreen();
   });
 
   function back() { if (stack.length) history.back(); }
+
+  function goHome() {
+    if (returningHome) return;
+    const depth = stack.length + (lbOpen ? 1 : 0);
+    if (lbOpen) closeLightbox(true);
+    // Закрываем все страницы одним действием; корзина и данные покупателя остаются в хранилище.
+    stack.splice(0).forEach(screen => screen.el.remove());
+    document.body.classList.remove('stack-open');
+    searchQuery = '';
+    openLevel = '';
+    setTab('catalog', { silent: true });
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    syncBack();
+    haptic('select');
+    if (depth) {
+      returningHome = true;
+      history.go(-depth);
+    } else {
+      history.replaceState({ depth: 0 }, '', '#catalog');
+    }
+  }
 
   function refreshCatalogBadges() {
     $$('#tabview .card').forEach(c => {
@@ -920,10 +947,7 @@
   }
 
   function finishOrder() {
-    const depth = stack.length;
-    if (!depth) return;
-    history.go(-depth);
-    setTimeout(() => setTab('catalog', { silent: true }), 450);
+    goHome();
   }
 
   // ---------- Делегирование событий ----------
@@ -931,7 +955,9 @@
     const t = e.target.closest('[data-action]');
     if (!t) return;
     const a = t.dataset.action;
+    if (returningHome) return;
     switch (a) {
+      case 'home': goHome(); break;
       case 'tab': setTab(t.dataset.tab); break;
       case 'level': toggleLevel(t.dataset.level); break;
       case 'list': openList(t.dataset.level, t.dataset.type); break;

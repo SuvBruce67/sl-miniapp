@@ -414,7 +414,10 @@ body.stack-open { overflow: hidden; }
 }
 .topbar__btn { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; transition: background .2s; position: relative; }
 .topbar__btn:active { background: var(--line); }
-.topbar__title { text-align: center; min-width: 0; }
+.topbar__title { text-align: center; min-width: 0; min-height: 44px; padding: 3px 8px; border-radius: 4px; }
+.topbar__title:active { background: var(--line); }
+.topbar__title:focus-visible { outline: 2px solid var(--green); outline-offset: -2px; }
+.topbar__brand { display: block; font-family: var(--f-head); font-size: 15px; line-height: 18px; }
 .topbar__title .h-sub { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 14px; }
 .topbar__title .h-eyebrow { font-size: 11px; margin-top: 1px; }
 .topbar__badge {
