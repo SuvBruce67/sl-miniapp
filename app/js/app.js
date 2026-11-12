@@ -100,11 +100,15 @@
     const a = document.createElement('a'); a.href = href; a.style.display = 'none';
     document.body.appendChild(a); a.click(); a.remove();
   }
+  function mailHref(subject = '', body = '') {
+    const normalizedBody = body.replace(/\r?\n/g, '\r\n');
+    return `mailto:${C.email}` + (subject || body ? `?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(normalizedBody)}` : '');
+  }
   function openMail(subject = '', body = '') {
     haptic();
     // копируем до перехода по mailto: на ПК почтовый клиент может не открыться, а адрес останется в буфере
     if (inTelegram && !body) copyWithToast(C.email, 'Адрес ' + C.email + ' скопирован');
-    openHref(`mailto:${C.email}` + (subject || body ? `?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}` : ''));
+    openHref(mailHref(subject, body));
   }
   function openPhone() {
     haptic();
@@ -883,7 +887,7 @@
         <div class="order-text">${esc(order.text)}</div>
         <div style="display:grid;gap:8px;margin-top:16px">
           <button class="btn btn--block" data-send="tg">${ICON.tg} Отправить в Telegram</button>
-          <button class="btn btn--dark btn--block" data-send="mail">${ICON.mail} Отправить на e-mail</button>
+          <a class="btn btn--dark btn--block" data-send="mail" href="${esc(mailHref('Заказ ' + order.no, order.text))}" target="_blank" rel="noopener">${ICON.mail} Отправить на e-mail</a>
           <button class="btn btn--ghost btn--block" data-send="copy">Скопировать текст заказа</button>
         </div>
         <div class="notice" style="margin-top:14px">При отправке в Telegram текст заказа копируется автоматически — просто вставьте его в чат с @${C.telegram}.</div>
@@ -894,13 +898,14 @@
       const b = e.target.closest('[data-send]');
       if (!b) return;
       const kind = b.dataset.send;
+      // Ссылка mailto должна открываться непосредственно при клике, без ожидания clipboard API.
+      if (kind === 'mail') { haptic(); return; }
       copy(order.text).then(ok => {
         if (kind === 'copy') { toast(ok ? 'Текст заказа скопирован' : 'Не удалось скопировать — выделите текст выше вручную'); haptic(ok ? 'success' : 'error'); return; }
         if (kind === 'tg') {
           if (!ok) { toast('Не удалось скопировать — выделите текст выше вручную'); haptic('error'); return; }
           toast('Текст заказа скопирован — вставьте его в чат'); setTimeout(openTelegram, 600);
         }
-        if (kind === 'mail') openMail('Заказ ' + order.no, order.text);
         if (!sent) { sent = true; cart = []; saveCart(); }
       });
     });

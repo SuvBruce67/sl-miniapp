@@ -6,6 +6,17 @@ const APP_URL = 'https://suvbruce67.github.io/sl-miniapp/';
 const SITE_URL = 'https://www.sl-ls.ru';
 const CONTACT_URL = 'https://t.me/straightlines';
 
+const DESCRIPTION = [
+  'Straight Lines — онлайн-магазин выкроек одежды прямого кроя.',
+  '',
+  'Здесь можно:',
+  '• подобрать выкройку по уровню сложности — от новичка до эксперта;',
+  '• заказать индивидуальный пошив, раскрой ткани или 3D-сканирование фигуры;',
+  '• узнать как снять мерки и распечатать выкройку.',
+  '',
+  'Нажмите «Старт».'
+].join('\n');
+
 const GREETING = [
   'Здравствуйте! Это Straight Lines — выкройки женской одежды прямого кроя.',
   '',
@@ -71,6 +82,18 @@ export default {
     const url = new URL(request.url);
 
     if (!env.BOT_TOKEN) return new Response('BOT_TOKEN is not set', { status: 500 });
+
+    // Применяет только фиксированное описание из кода; вебхук и очередь сообщений не трогает.
+    if (request.method === 'GET' && url.pathname === '/description') {
+      const results = [];
+      for (const language_code of ['', 'ru']) {
+        const saved = await tg(env, 'setMyDescription', { description: DESCRIPTION, language_code });
+        const current = await tg(env, 'getMyDescription', { language_code });
+        results.push({ language_code, ok: saved.ok && current.ok && current.result.description === DESCRIPTION });
+      }
+      const ok = results.every(r => r.ok);
+      return Response.json({ ok, results }, { status: ok ? 200 : 502 });
+    }
 
     // Входящие обновления от Telegram
     if (request.method === 'POST' && url.pathname === '/webhook') {
